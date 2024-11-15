@@ -22,6 +22,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        env:
+          - name: version2asd
+            value: asdfadflkjlkj
   strategy:
     canary:
       steps:
