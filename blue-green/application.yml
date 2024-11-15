@@ -69,8 +69,8 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: rollout-bluegreen
-   annotations:
-     nginx.ingress.kubernetes.io/rewrite-target: /$1
+  annotations:
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - http:
@@ -82,5 +82,3 @@ spec:
             name: rollout-bluegreen-active
             port:
               number: 80
-
-
